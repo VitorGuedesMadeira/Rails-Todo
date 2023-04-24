@@ -1,2 +1,3 @@
 <p>Description: <%= todo.description %></p>
 <p>Completed: <%= todo.completed %></p>
+<%= button_to "Delete todo", todo_path(todo), method: :delete %>

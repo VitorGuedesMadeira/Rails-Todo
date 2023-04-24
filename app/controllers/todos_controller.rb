@@ -1,4 +1,6 @@
 class TodosController < ApplicationController
+  before_action :set_todo, only: %i[destroy]
+
   def index
     @todos = Todo.all.order(id: :asc)
   end
@@ -21,9 +23,19 @@ class TodosController < ApplicationController
 
   def update; end
 
-  def destroy; end
+  def destroy
+    if @todo.destroy
+      redirect_to root_path
+    else
+      render :index
+    end
+  end
 
   private
+
+  def set_todo
+    @todo = Todo.find(params[:id])
+  end
 
   def params_required
     params.require(:todo).permit(:description)
