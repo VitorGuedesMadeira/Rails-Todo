@@ -1,10 +1,10 @@
-#buttons-container {
+.buttons-container {
   display: flex;
   gap: 1rem;
 }
 
-#buttons-container a,
-#buttons-container button {
+.buttons-container a,
+.buttons-container button {
   background-color: black;
   color: white;
   padding: 0.5rem 1rem;
@@ -16,8 +16,30 @@
   border-radius: 0.5rem;
 }
 
-#buttons-container a:hover,
-#buttons-container button:hover {
+.buttons-container a:hover,
+.buttons-container button:hover {
   background-color: rgb(43, 43, 43);
   transform: scale(1.025);
+}
+
+#new-todo-form > * {
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.25s;
+  border-radius: 0.5rem;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid #fff3;
+  border-bottom: 1px solid #fff3;
+}
+
+#new-todo-form input[type="text"] {
+  background-color: white;
+  cursor: auto;
+  outline: none;
 }

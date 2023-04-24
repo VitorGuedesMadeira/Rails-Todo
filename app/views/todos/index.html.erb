@@ -1,10 +1,13 @@
 <h1>My Todos</h1>
+<div class="buttons-container">
+  <%= link_to "Add New Todo", new_todo_path %>
+</div>
+
 <div id="todos-container">
   <%= render @todos %>
 </div>
 
-<div id="buttons-container">
-  <%= link_to "Add New Todo", new_todo_path %>
+<div class="buttons-container">
   <%= button_to "Select All", select_all_path, method: :patch %>
   <%= button_to "Delete Completed", delete_completed_path, method: :delete %>
 </div>
