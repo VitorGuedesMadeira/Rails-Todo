@@ -1,0 +1,11 @@
+header {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to top, black, rgb(48, 48, 48));
+  color: white;
+  padding: 0 5%;
+  position: sticky;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}

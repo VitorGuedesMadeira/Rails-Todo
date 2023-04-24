@@ -1,0 +1,23 @@
+#buttons-container {
+  display: flex;
+  gap: 1rem;
+}
+
+#buttons-container a,
+#buttons-container button {
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.25s;
+  border-radius: 0.5rem;
+}
+
+#buttons-container a:hover,
+#buttons-container button:hover {
+  background-color: rgb(43, 43, 43);
+  transform: scale(1.025);
+}
