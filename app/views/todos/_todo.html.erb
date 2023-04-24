@@ -1,0 +1,9 @@
+<%= form_with model: todo do |form| %>
+  <%= form.check_box :completed, onchange: "this.form.submit()" %>
+<% end %>
+
+<%= turbo_frame_tag "edit_#{todo.id}" do %>
+  <%= link_to todo.description, edit_todo_path(todo) %>
+<% end %>
+
+<%= button_to "Delete todo", todo_path(todo), method: :delete %>
