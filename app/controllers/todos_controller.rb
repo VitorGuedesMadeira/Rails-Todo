@@ -37,6 +37,15 @@ class TodosController < ApplicationController
     end
   end
 
+  def delete_completed
+    @todos = Todo.where(completed: true)
+    if @todos.destroy_all
+      redirect_to root_path
+    else
+      render :index
+    end
+  end
+
   private
 
   def set_todo

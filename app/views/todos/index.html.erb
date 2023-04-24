@@ -1,3 +1,4 @@
 <h1>My Todos</h1>
 <%= render @todos %>
 <%= link_to "Add new todo", new_todo_path %>
+<%= button_to "Delete Completed", delete_completed_path, method: :delete %>
