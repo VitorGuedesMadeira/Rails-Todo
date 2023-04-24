@@ -1,2 +1,5 @@
-<h1>Todos#edit</h1>
-<p>Find me in app/views/todos/edit.html.erb</p>
+<%= turbo_frame_tag "edit_#{@todo.id}" do %>
+  <%= form_with model: @todo do |form| %>
+    <%= form.text_field :description %>
+  <% end %>
+<% end %>
