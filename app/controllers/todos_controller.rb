@@ -46,6 +46,14 @@ class TodosController < ApplicationController
     end
   end
 
+  def select_all
+    if Todo.update_all(completed: true)
+      redirect_to root_path
+    else
+      render :index
+    end
+  end
+
   private
 
   def set_todo

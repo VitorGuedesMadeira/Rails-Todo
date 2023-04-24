@@ -4,6 +4,7 @@
 </div>
 
 <div id="buttons-container">
-  <%= link_to "Add new todo", new_todo_path %>
+  <%= link_to "Add New Todo", new_todo_path %>
+  <%= button_to "Select All", select_all_path, method: :patch %>
   <%= button_to "Delete Completed", delete_completed_path, method: :delete %>
 </div>
